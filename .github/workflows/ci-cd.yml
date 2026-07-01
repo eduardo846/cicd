@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout del código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v5
@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Checkout del código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
@@ -74,7 +74,7 @@ jobs:
             --cov-fail-under=75        # Falla si coverage < 80%
 
       - name: Subir reporte de coverage
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: coverage-report-py${{ matrix.python-version }}
@@ -92,7 +92,7 @@ jobs:
 
     steps:
       - name: Checkout del código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v5
